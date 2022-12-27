@@ -1,7 +1,9 @@
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import { readFileSync } from "fs";
+// js파일 컴파일시 로컬 모듈은 확장자(.js) 필수
 import { BooksDataSource } from "./datasources.js";
+// js파일 컴파일시 로컬 모듈은 확장자(.js) 필수
 import resolvers from "./resolvers.js";
 
 const typeDefs = readFileSync("./schema.graphql", { encoding: "utf-8" });
